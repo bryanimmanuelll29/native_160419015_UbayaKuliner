@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/itemHome">
+
+    <fragment
+        android:id="@+id/itemHome"
+        android:name="com.ubaya.a160419015_ubayakuliner.view.HomeFragment"
+        android:label="HOME"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/actionHomeDetail"
+            app:destination="@id/itemHomeDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemMessage"
+        android:name="com.ubaya.a160419015_ubayakuliner.view.MessageFragment"
+        android:label="MESSAGE"
+        tools:layout="@layout/fragment_message">
+        <action
+            android:id="@+id/actionMessageDetail"
+            app:destination="@id/itemMessageDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemFavorite"
+        android:name="com.ubaya.a160419015_ubayakuliner.view.FavoriteFragment"
+        android:label="FAVORITE"
+        tools:layout="@layout/fragment_favorite">
+        <action
+            android:id="@+id/actionMenuDetailFromFavorite"
+            app:destination="@id/itemMenuDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemProfile"
+        android:name="com.ubaya.a160419015_ubayakuliner.view.ProfileFragment"
+        android:label="PROFILE"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/actionIntroduction"
+            app:destination="@id/itemIntroduction" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemHomeDetail"
+        android:name="com.ubaya.a160419015_ubayakuliner.view.HomeDetailFragment"
+        android:label="RESTAURANT"
+        tools:layout="@layout/fragment_home_detail">
+        <argument
+            android:name="restaurantId"
+            app:argType="string" />
+        <action
+            android:id="@+id/actionMenuDetail"
+            app:destination="@id/itemMenuDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemMenuDetail"
+        android:name="com.ubaya.a160419015_ubayakuliner.view.MenuDetailFragment"
+        android:label="MENU"
+        tools:layout="@layout/fragment_menu_detail">
+        <argument
+            android:name="menuId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemMessageDetail"
+        android:name="com.ubaya.a160419015_ubayakuliner.view.MessageDetailFragment"
+        android:label="MESSAGE"
+        tools:layout="@layout/fragment_message_detail">
+        <argument
+            android:name="messageId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemIntroduction"
+        android:name="com.ubaya.a160419015_ubayakuliner.view.IntroductionFragment"
+        android:label="ABOUT"
+        tools:layout="@layout/fragment_introduction" />
+</navigation>
